@@ -1,0 +1,40 @@
+<div class="row">
+    <h2>Estudio</h2>
+    <div class="col-lg-1">
+  <button type="button" class="btn btn-dark" routerLink="nuevoestu" *ngIf="isLogged">
+            Nuevo Estudio
+       </button>
+      
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-3">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Estudio of estudio" >
+            <td><h4>{{Estudio.nombreE}}</h4></td>
+            <td>{{Estudio.descripcionE}}</td>
+            <td>{{Estudio.fin}}</td>
+            <td>{{Estudio.titulo}}</td>
+
+            <div class="col-lg-3">
+             <img [src]="Estudio.img" alt="">
+            </div>
+    
+          <div class="col-lg-4" *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editestu/{{Estudio.id}}">
+                <i class="bi bi-pencil-fill"></i>EDITAR</button>
+
+            <button class="btn btn-dark" (click)="delete(Estudio.id)">
+                <i class="bi bi-trash-fill"></i>BORRAR</button>
+</div>
+</tr>
+            </tbody>
+            </table>
+            </div>
+        
+            <!--<div class="campo"> 
+                <button class="btn btn-dark" (click)="delete"{{estudio.id}}><i class="bi bi-trash-fill" *ngIf="isLogged"></i>BORRAR</button>
+            
+            <div>
+            <button class="btn btn-light"><i class="bi bi-pencil-fill" routerLink="/editestu/{{estudio}}"></i>>EDITAR</button>
+            </div>-->

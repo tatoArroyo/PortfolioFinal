@@ -1,0 +1,15 @@
+.row{
+    background-color: #a1b5cb; 
+    padding: 20px;
+}
+.campo:last-child{
+    justify-content: flex-end;
+    margin-left: 45em;
+}
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
